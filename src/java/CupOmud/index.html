@@ -1,0 +1,244 @@
+<html>
+<head>
+   <title>Cup-O MUD: The Adventure Continues...</title>
+   <meta name="Author" content="Alex Stewart">
+</head>
+<body background="/images/backgrounds/bumps.gif">
+
+ <h1 align=center>The Cup-O MUD Client Main Page</h1>
+
+<hr>
+
+<h2 align=center>Welcome to the home of Cup-O MUD!</h2>
+
+<p align=center><b>Author</b>: <a href="http://www.crl.com/~riche/">Alex Stewart
+(Richelieu)</a> &lt;<a href="mailto:riche@crl.com">riche@crl.com</a>&gt;</p>
+
+<p>This is just a simple page (well, ok, so it's not so simple anymore) I've
+whipped up to organize information related to the Cup-O MUD client and its
+development.  This page will probably be evolving for a while, so be sure to
+check back here every so often to see what's up in the world of Cup-O MUD!</p>
+
+<hr width=80%><h2 align=center>What is it?</h2>
+
+<p>The Cup-O MUD client is a fully functional client for
+<a href="CupOmud_docs.html#muve">Multi-User Virtual Environments (MUVEs, aka
+MUDs, MU*s, MOOs, etc)</a>, written in the Java programming language.
+The Cup-O MUD applet allows embedding an active, real-time link to a
+MUVE system right into a web page or web system, which is immediately
+available to any user running a Java-capable WWW browser.  Local-install
+and standalone versions of the Cup-O MUD client are also in the works.</p>
+
+<p>For more information, please see the <a href="CupOmud_docs.html#what">What
+is Cup-O MUD</a> section of <a href="CupOmud_docs.html">the Cup-O MUD
+documentation</a>.</p>
+
+<hr width=80%><h2 align=center>Status of the Cup-O MUD project</h2>
+
+<div align=center>
+<table border><tr>
+<td>Lines of source:   1239   </td>
+<td>Number of classes: 2      </td>
+<td>Compiled size:     13,328 </td>
+</tr></table>
+</div>
+
+<p><b>This is the 1.3 release of Cup-O MUD</b>.  This is primarily a bug-fix release and changes almost nothing about the way the applet actually functions.  I am currently working on the 2.0 release, which will be a significant overhaul, including quite a few new features.  It's a bit too early to predict when this release will actually be out, however.</p>
+
+<p>The other big change with release 1.3 is that Cup-O MUD now comes with a debugging version.  This will help me (and anyone else who wants to) track down problems which people encounter when trying to run Cup-O MUD.  Hopefully, with a little help from a few people out there in browserland, this means by the 2.0 release (or perhaps earlier) most of the problems with mac Netscape and Internet Explorer people have been reporting will be much better.</p>
+
+<hr width=80%><h2 align=center><b><a name="download">Downloading</a></b></h2>
+
+<h3>Who needs to download and install it?</h3>
+
+<p><b>PLEASE NOTE:</b> Unlike most peices of software, the Cup-O MUD
+client is <em>not</em> downloaded and installed on the user's machine.
+Instead, the Cup-O MUD java applet needs to be installed <em>on the
+server</em> which serves the web resources users will use to connect to
+the MUVE in question.  This means that the Cup-O MUD client must be
+installed by the administrators of a particular MUVE system in order for
+the users of that system to be able to take advantage of it.</p>
+
+<p><b>Please Also Note:</b> Due to security restrictions inherent in the
+Java implementations on all current Java-capable web browsers I am aware
+of, Java applets (and thus the Cup-O MUD applet) are only allowed to
+open network connections to the same host they were downloaded from.
+Since the Cup-O MUD applet needs to open a network connection to the
+MUVE in question, this means that in order to function <strong>the
+applet must be installed on a HTTP/FTP/etc. server running on the same
+physical host as the MUVE it is to connect to</strong>.</p>
+
+<h3>About Java source code</h3>
+
+<p>As of version 1.0, source code for the Cup-O MUD client is also
+available.  It is important to stress, however, that Java is designed to
+be a platform-independent executable format.  What this means is you do
+<em>not</em> need to recompile the Java source code for an applet for each type
+of system you want to use it on.  The compiled version of Cup-O MUD
+should automatically work under all platforms (unix, Win95, macintosh,
+Netscape, Internet Explorer, etc) with no modification.</p>
+
+<h3>How to get it</h3>
+
+<p>There are now two zip archives available for those who want to
+install the Cup-O MUD client on their web site:</p>
+<ul>
+ <li><a href="CupOmud_1.3_exec.zip">CupOmud_1.3_exec.zip</a> contains the
+executable Java class files needed to install Cup-O MUD on a web site,
+along with a copy of <a href="CupOmud_docs.html">the Cup-O MUD
+documentation</a> and an example HTML file showing a simple
+implementation.</li>
+ <li><a href="CupOmud_1.3_src.zip">CupOmud_1.3_src.zip</a> contains the source
+code for the current Cup-O MUD release, along with some basic
+instructions on how to compile and use it.  The source code is not
+needed unless you wish to make changes to the Java code of the client
+itself.</li>
+</ul>
+
+<p><b>PLEASE NOTE:</b> These ZIP files contain subdirectories and <em>must</em> be unzipped with their directory structure intact to work properly.  Specifically, when installing Cup-O MUD on a web site, <code>Applet.class</code> <b>MUST</b> be located in a <code>mudclient</code> directory under the directory which contains <code>CupOmud.class</code>.  You have been warned.</p>
+
+<p>These files are being distributed under the terms of the <a
+href="COPYING">GNU Public License</a>.</p>
+
+<hr width=80%><h2 align=center><b>Caveats</b></h2>
+
+<p>Being in good part on the cutting edge of Java development, the Cup-O
+MUD client has uncovered its share of bugs in various (still evolving)
+systems.  Some of them are actually bugs in Cup-O MUD itself, which I
+attempt to correct fairly quickly whenever I find out about them, but
+some also turn out to be bugs in web browsers or the underlying Java
+implementation, which I have little control over.  Following is a list
+of those which have come to my attention thus far:</p>
+
+<h3>Mac Netscape</h3>
+
+<p>Well, what with the release of Mac Netscape 3.0, the Java
+implementation seems to be a little better than it used to be, though
+it still has some problems.  The good news is that Cup-O MUD does seem
+to work... most of the time.</p>
+
+<p>Unfortunately, I don't have access to a mac myself, and several of
+the people who have reported problems to me only seem to be able to
+reproduce them intermittently.  However, here's a list of the currently
+known problems running Cup-O MUD under Mac Netscape:</p>
+<ul>
+ <li>The applet will come up and display properly, but will report
+    "Connection Failed!".  Netscape's Java Console will report a
+    "java.net.SocketException: unknown error".  This is one of the same
+    problems which people experienced with Netscape 2.0.. I thought this had
+    been fixed with 3.0, but at least one person has reported they still
+    encounter it.</li>
+ <li>The applet will come up and display properly, will connect to the
+    MUVE, and will allow sending commands to the MUVE and respond to MUVE
+    output such as display-URL requests, but no output shows up in the
+    output window.</li>
+</ul>
+
+<p>Both of these symptoms are apparently due to flawed Java implementations in
+various versions of Mac Netscape.  Anyone having problems with this is
+encouraged to
+<a href="http://www1.netscape.com/cgi-bin/auto_bug.cgi">complain to
+netscape</a> about it.</p>
+
+<h3>Internet Explorer</h3>
+
+<p>I have had varying reports of problems with Internet Explorer (and most of these haven't been much more helpful than "it doesn't work").  I have tried it a couple of times and not had any problems with it myself, which leaves me in much the same situation as with mac Netscape above.. unless someone out there who is having problems can help me out, there's not a lot I can do to track down the problems...</p>
+
+<h3>Miscellaneous</h3>
+
+<p>The following problems have been reported to me.  I don't have the
+resources to verify most of them.  If anyone can provide more info or
+(even better) some info on how to get around these problems,
+<em>please</em> <a href="mailto:riche@crl.com">let me know</a>.  The
+platforms listed for each of the problems are the OS and
+application/java-implementation under which the problem was experienced,
+as reported to me.  This doesn't necessarily mean these are the only
+platforms which have the given problem, and if people know of other
+platforms which experience the same behavior as described, please let me
+know and I'll add them to the list.</p>
+
+<ul>
+<!-- (I'm don't know whether these apply anymore with Netscape 3.0 and
+     Cup-O MUD 1.1, so they've been taken off the list unless I hear that
+     people are still having problems with them)
+
+ <li><b>[Win95/Netscape]</b> If text from the MUVE arrives while the Cup-O
+MUD applet's web page isn't onscreen, the new text doesn't get processed
+(even after going back to the applet's page) until the user sends some
+input to the MUVE.</li>
+ <li><b>[Win95/Netscape]</b> (unconfirmed) Output occasionally stops for a
+long time and then resumes for no apparent reason.</li>
+ <li><b>[Win95/AppletViewer]</b> When starting up, Sun's AppletViewer prints a
+stack trace for a java.io.FileNotFoundException, but the Applet
+functions normally anyway (just ignore the error).</li>
+
+-->
+
+ <li><b>[Linux/Netscape]</b> When non-english keyboard mapping facilities are
+in use, Java applets appear to respond differently to the keyboard
+mappings than the Netscape application does, causing keys to be mapped
+to non-english codes for Cup-O MUD input when they aren't for normal
+Netscape input (at least I think this is the problem that was reported
+to me).</li>
+</ul>
+
+<hr width=80%><h2 align=center>Cup-O MUD Resources and Documentation</h2>
+
+<ul>
+ <li><a href="CupOmud_docs.html">The Cup-O MUD Documentation</a>
+  <p>(still under construction, but mostly complete) Everything you ever
+  wanted to know about the Cup-O MUD client.  Includes a description of
+  <a href="CupOmud_docs.html#what">what it is</a>, a full
+  <a href="CupOmud_docs.html#features">list of features</a>, and
+  <a href="CupOmud_docs.html#using">how to use it</a>.</p></li>
+ <li><a href="snapshots">Screen Snapshots of Cup-O MUD in action</a>
+  <p>For the Java-impaired who want to see what all this looks like and
+  what can be done with it, here are some screen snapshots of the Cup-O
+  MUD client, both by itself and in conjunction with the Diversity
+  University web interface.</p></li>
+ <li><a href="example.html">Connect with the Cup-O MUD client</a>
+  <p>If you have a Java-capable WWW browser (such as Netscape 2.0 for
+  Windows 95/NT or unix), you can follow this link to see a simple
+  demonstration of the Cup-O MUD applet in action.  For a more
+  sophisticated demonstration, see:</p></li>
+ <li><a href="http://www.du.org/dumoo/autoconnect_form.html">The DU/BioWeb/Cup-O MUD interface</a>
+  <p>Take a look at the state of the art of MOO interface technologies
+  with the (currently under development) integrated Diversity University
+  Java web interface.</p></li>
+</ul>
+
+<hr width=80%><h2 align=center>Places Using Cup-O MUD</h2>
+
+<p>Here's a list of places out there who have let me know they're using
+Cup-O MUD on their web pages (take a look!).  If you get Cup-O MUD up
+and running with your system, please drop me a line letting me know and
+I'll add a link here (if you're using Cup-O MUD but don't want to be
+added to this list please drop me a line anyway, and just let me know
+you don't want to be on the list).</p>
+
+<p>[I've gotten a little behind on this list (ok, a lot behind), so my apologies to those who have sent me mail whose sites haven't made it on here yet.  I will be updating this list shortly.]</p>
+
+<ul>
+ <li><a href="http://www.du.org/dumoo/autoconnect_form.html">Diversity University MOO's integrated web interface</a></li>
+ <li><a href="http://voyager.hijinx.com:8080/">HijinxMOO</a></li>
+ <li><a href="http://www.netpower.no:3275/">Ztalker</a></li>
+ <li><a href="http://www.arch.usyd.edu.au/kcdc/studioMOO">StudioMOO</a></li>
+</ul>
+
+<hr width=80%><h2 align=center>Acknowledgements and Reccomendations</h2>
+
+<div align=center>
+ <A HREF="http://www.netscape.com/comprod/mirror/client_download.html"><IMG WIDTH=88 HEIGHT=31 SRC="http://www.netscape.com/comprod/products/navigator/version_3.0/images/netnow3.gif" ALIGN=CENTER BORDER=0 HSPACE=4 VSPACE=0></A>
+ <A HREF="http://www.javasoft.com/index.html"><IMG SRC="http://java.sun.com/images/logos/fancy.color.gif" BORDER=0 ALIGN=CENTER WIDTH=56 HEIGHT=86 ALT="[JavaSoft]"></A>
+
+<p>Cup-O MUD has been designed, developed, and tested using Netscape
+Navigator and the Sun Java Development Kit.</p>
+<p>While other Java-capable browsers should function adequately with the
+Cup-O MUD applet, Netscape Navigator 3.0 is the recommended web
+browser for use with Cup-O MUD.</p>
+</div>
+
+<hr><div align=center>Last updated on June 22, 1997 by <a href="http://www.crl.com/~riche/">Alex Stewart</a> &lt;<a href="mailto:riche@crl.com">riche@crl.com</a>&gt;</div>
+</body>
+</html>
+
